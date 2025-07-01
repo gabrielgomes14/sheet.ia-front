@@ -5,9 +5,6 @@ __pycache__/
 *.db
 .env
 
-# SQLite database
-hodometro.db
-
 # VSCode settings (comuns)
 .vscode/*
 !.vscode/extensions.json
