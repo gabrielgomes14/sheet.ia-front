@@ -1,0 +1,14 @@
+# Python (FastAPI) backend
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.db
+.env
+
+# SQLite database
+hodometro.db
+
+# VSCode settings (comuns)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
