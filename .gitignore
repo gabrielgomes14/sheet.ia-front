@@ -9,3 +9,4 @@ __pycache__/
 .vscode/*
 !.vscode/extensions.json
 !.vscode/settings.json
+modelos_hodometro/

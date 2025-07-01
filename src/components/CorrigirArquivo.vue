@@ -211,11 +211,11 @@ background-color: whitesmoke;
 .custom-card {
 background-color: white;
 border-radius: 20px;
-border: 1px solid #e0e0e0;
+border: 1px solid #5a4c03;
 }
 
 .text-truncate {
-max-width: 140px;
+max-width: 800px;
 white-space: nowrap;
 overflow: hidden;
 text-overflow: ellipsis;
@@ -245,6 +245,6 @@ color: white !important;
 }
 
 .subtitle-large {
-  font-size: 20px; /* ou o tamanho que quiser */
+  font-size: 15px; /* ou o tamanho que quiser */
 }
 </style>
