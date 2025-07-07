@@ -143,30 +143,45 @@ async function enviarArquivo() {
   formData.append("file", arquivo.value);
 
   try {
-    // Aqui a alteração importante: URL relativa /api/corrigir/
     const response = await fetch("/api/corrigir/", {
       method: "POST",
       body: formData,
     });
 
+    const contentType = response.headers.get("content-type");
+
     if (!response.ok) {
-      const erro = await response.json();
-      status.value = "Erro: " + erro.erro;
+      let erroMensagem = "Erro desconhecido";
+
+      if (contentType && contentType.includes("application/json")) {
+        const erro = await response.json();
+        erroMensagem = erro.erro || erro.detail || JSON.stringify(erro);
+      } else {
+        erroMensagem = await response.text();
+      }
+
+      status.value = "Erro: " + erroMensagem;
       statusTipo.value = "error";
       carregando.value = false;
       return;
     }
 
-    const json = await response.json();
-    dadosCorrigidos.value = json.dados || [];
+    if (contentType && contentType.includes("application/json")) {
+      const json = await response.json();
+      dadosCorrigidos.value = json.dados || [];
 
-    if (dadosCorrigidos.value.length) {
-      status.value = "Arquivo corrigido carregado!";
-      statusTipo.value = "success";
+      if (dadosCorrigidos.value.length) {
+        status.value = "Arquivo corrigido carregado!";
+        statusTipo.value = "success";
+      } else {
+        status.value = "Nenhum dado encontrado no arquivo corrigido.";
+        statusTipo.value = "warning";
+      }
     } else {
-      status.value = "Nenhum dado encontrado no arquivo corrigido.";
-      statusTipo.value = "warning";
+      status.value = "Erro: resposta inesperada da API.";
+      statusTipo.value = "error";
     }
+
   } catch (error) {
     status.value = "Erro na requisição: " + error.message;
     statusTipo.value = "error";
