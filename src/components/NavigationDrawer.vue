@@ -26,8 +26,6 @@ const drawer = ref(true);
 
 // Lista de opções do menu
 const items = [
-  { title: 'Dashboard', icon: 'mdi-view-dashboard', action: () => {} },
   { title: 'Importar Planilha', icon: 'mdi-file-excel', action: () => {} },
-  { title: 'Sair', icon: 'mdi-logout', action: () => {} },
 ];
 </script>

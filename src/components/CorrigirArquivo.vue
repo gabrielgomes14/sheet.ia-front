@@ -76,14 +76,8 @@
                 </tr>
               </thead>
               <tbody>
-                <tr
-                  v-for="(item, index) in dadosCorrigidos"
-                  :key="index"
-                >
-                  <td
-                    v-for="header in headers"
-                    :key="header.key"
-                  >
+                <tr v-for="(item, index) in dadosCorrigidos" :key="index">
+                  <td v-for="header in headers" :key="header.key">
                     {{ item[header.key] }}
                   </td>
                 </tr>
@@ -105,7 +99,7 @@
 import { ref, computed } from "vue";
 import * as XLSX from "xlsx";
 import { saveAs } from "file-saver";
-import logo from '../assets/fleet.png';
+import logo from "../assets/fleet.png"; // substitua com seu logo real ou comente essa linha
 
 const arquivo = ref(null);
 const status = ref("");
@@ -115,9 +109,9 @@ const dadosCorrigidos = ref([]);
 
 const headers = computed(() => {
   if (!dadosCorrigidos.value.length) return [];
-  return Object.keys(dadosCorrigidos.value[0]).map(key => ({
+  return Object.keys(dadosCorrigidos.value[0]).map((key) => ({
     title: key.charAt(0).toUpperCase() + key.slice(1).replace(/_/g, " "),
-    key: key
+    key: key,
   }));
 });
 
@@ -143,7 +137,7 @@ async function enviarArquivo() {
   formData.append("file", arquivo.value);
 
   try {
-    const response = await fetch("/api/corrigir/", {
+    const response = await fetch("http://localhost:8000/api/corrigir/", {
       method: "POST",
       body: formData,
     });
@@ -162,7 +156,6 @@ async function enviarArquivo() {
 
       status.value = "Erro: " + erroMensagem;
       statusTipo.value = "error";
-      carregando.value = false;
       return;
     }
 
@@ -181,7 +174,6 @@ async function enviarArquivo() {
       status.value = "Erro: resposta inesperada da API.";
       statusTipo.value = "error";
     }
-
   } catch (error) {
     status.value = "Erro na requisição: " + error.message;
     statusTipo.value = "error";

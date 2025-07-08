@@ -17,13 +17,9 @@ RUN pnpm run build
 
 
 # Etapa 2: imagem final com NGINX para servir os arquivos
-FROM nginx:alpine
+FROM nginx:alpine3.22
 
-# Remove configuração default
-RUN rm -rf /etc/nginx/conf.d
-
-# Copia a configuração nginx da pasta front/front-ecar/nginx para dentro do container
-COPY ./nginx /etc/nginx
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
 # Copia os arquivos da build para o NGINX
 COPY --from=build /app/dist /usr/share/nginx/html
