@@ -132,12 +132,8 @@ Exemplo de acesso:
 
     Frontend: http://localhost:3000
 
-    ![frontend funcionando](imgs/frontend.png)
-
     Backend (Swagger Docs): http://localhost:8000/docs
-     
-    ![backend funcionando](imgs/backend1.png)
-    ![backend funcionando](imgs/backend2.png)
+    
 ---
 
 ## 7. Conclusão
@@ -174,15 +170,15 @@ Exemplo de acesso:
 
 ## Bibliotecas e Tecnologias Utilizadas
 
-- **FastAPI:** Framework web para backend rápido e moderno em Python.
-- **Pandas e NumPy:** Manipulação e análise de dados.
-- **scikit-learn:** Modelos de Machine Learning para correção de dados.
-- **SQLAlchemy e psycopg2:** Integração com PostgreSQL.
-- **joblib:** Serialização e desserialização de modelos.
-- **Unidecode:** Tratamento de strings e normalização de texto.
-- **Docker:** Containerização dos serviços.
-- **Kubernetes/Kind:** Orquestração de containers.
-- **ArgoCD:** Deploy GitOps e sincronização contínua.
-- **Ansible:** Automação do provisionamento.
+- **FastAPI:** Utilizado para desenvolver o backend da aplicação, fornecendo uma API REST rápida e eficiente para receber as planilhas Excel, processar os dados de hodômetro, aplicar o modelo de Machine Learning e retornar os dados corrigidos.
+- **Pandas e NumPy:** Utilizados para manipulação, limpeza e análise dos dados extraídos das planilhas Excel. Pandas facilitou o trabalho com DataFrames para tratamento das tabelas, enquanto NumPy auxiliou em operações matemáticas e vetoriais necessárias para o processamento.
+- **scikit-learn:** Empregado para treinar e aplicar modelos de Machine Learning que corrigem os valores de hodômetro com base nos dados históricos, melhorando a precisão das leituras antes de armazenar e retornar.
+- **SQLAlchemy e psycopg2:**  SQLAlchemy foi usado como ORM para facilitar a interação entre o backend FastAPI e o banco de dados PostgreSQL, abstraindo comandos SQL. Psycopg2 é o driver Python que faz a conexão direta com o banco PostgreSQL.
+- **joblib:** Utilizado para serializar (salvar) e desserializar (carregar) os modelos treinados de Machine Learning, permitindo que o backend possa reutilizar os modelos sem precisar treiná-los a cada execução.
+- **Unidecode:**  Aplicado para normalização e tratamento de strings textuais, garantindo consistência na manipulação de textos que possam conter caracteres especiais ou acentuações, especialmente ao lidar com dados de entrada.
+- **Docker:** Usado para containerizar os serviços do backend, frontend e banco de dados, garantindo que todos os componentes rodem isoladamente com suas dependências específicas, facilitando a portabilidade e implantação
+- **Kubernetes/Kind:** Kind (Kubernetes in Docker) foi usado para criar um cluster Kubernetes local que orquestra os containers Docker, simulando um ambiente de produção para validar o deploy, escalabilidade e comunicação entre os serviços.
+- **ArgoCD:** Ferramenta GitOps que automatiza o deploy da aplicação dentro do cluster Kubernetes. ArgoCD monitora o repositório Git com os manifests e sincroniza o estado do cluster, garantindo deploy contínuo e consistente.
+- **Ansible:** Utilizado para automatizar o provisionamento do ambiente de desenvolvimento, instalando e configurando Docker, Kubernetes, Kind, ArgoCD e demais dependências, garantindo que o ambiente local pudesse ser reproduzido de forma fácil e consistente.
 
 ---
