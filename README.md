@@ -165,9 +165,10 @@ Exemplo de acesso:
 
 ## 8. Links dos Repositórios
 
-- Front-end
-
-[[https://github.com/gomesgalikosky/machine-learning_ecar](https://github.com/gomesgalikosky/machine-learning_ecar)](https://github.com/gabrielgomes14/sheet.ia-front)
+- Front-end: [sheet.ia-front](https://github.com/gabrielgomes14/sheet.ia-front)
+- Back-end: [sheet.ia-back](https://github.com/gabrielgomes14/sheet.ia-back)
+- Infraestrutura: [sheet.ia-infra](https://github.com/gabrielgomes14/sheet.ia-infra)
+- Provisionamento: [sheet.ia-provisioner](https://github.com/gabrielgomes14/sheet.ia-provisioner)
 
 ---
 
