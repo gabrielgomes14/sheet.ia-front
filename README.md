@@ -156,7 +156,7 @@ Exemplo de acesso:
 - Utilizaria um ambiente Kubernetes em nuvem para testes em produção.
 - Automatizaria mais ainda a pipeline CI/CD, com testes automatizados integrados.
 - Adotaria Helm para gerenciar os charts Kubernetes.
-- Melhoraria a interface do frontend para melhor usabilidade.
+- Melhoraria a interface do frontend para melhor usabilidade e estética.
 
 ---
 
