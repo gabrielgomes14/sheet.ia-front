@@ -163,9 +163,11 @@ Exemplo de acesso:
 
 ---
 
-## 8. Link para Repositório
+## 8. Links dos Repositórios
 
-[https://github.com/gomesgalikosky/machine-learning_ecar](https://github.com/gomesgalikosky/machine-learning_ecar)
+- Front-end
+
+[[https://github.com/gomesgalikosky/machine-learning_ecar](https://github.com/gomesgalikosky/machine-learning_ecar)](https://github.com/gabrielgomes14/sheet.ia-front)
 
 ---
 
