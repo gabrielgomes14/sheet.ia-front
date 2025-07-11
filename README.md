@@ -126,12 +126,18 @@ Como acessar a aplicação no cluster
 
     Banco de dados PostgreSQL: exposto na porta 5432 via port-forward, utilizado localmente com o DBeaver para visualização dos dados.
 
+    ![frontend funcionando](imgs/frontend.png)    
+
 Exemplo de acesso:
 
     Frontend: http://localhost:3000
 
-    Backend (Swagger Docs): http://localhost:8000/docs
+    ![frontend funcionando](imgs/frontend.png)
 
+    Backend (Swagger Docs): http://localhost:8000/docs
+     
+    ![backend funcionando](imgs/backend1.png)
+    ![backend funcionando](imgs/backend2.png)
 ---
 
 ## 7. Conclusão
