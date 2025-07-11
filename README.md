@@ -116,14 +116,21 @@ O ambiente foi provisionado em máquina local Fedora 40, com os serviços contai
 
 ### Como acessar a aplicação no cluster
 
-- Backend exposto na porta 8000 (localmente via port-forward).
-- Frontend exposto na porta 3000 (localmente via port-forward).
-- Banco de dados exposto na porta 5432 para conexão local (port-forward).
+Para verificar a persistência dos dados e testar as queries durante o desenvolvimento, foi utilizado o DBeaver, uma ferramenta gráfica para acesso e manipulação de bancos de dados. Com o DBeaver, foi possível visualizar as tabelas, executar comandos SQL e validar a estrutura do banco PostgreSQL exposto via port-forward (porta 5432).
 
-Exemplo para acessar no navegador:
+Como acessar a aplicação no cluster
 
-- Frontend: `http://localhost:3000`
-- Backend API (docs): `http://localhost:8000/docs`
+    Backend: exposto na porta 8000 via port-forward, acessível em http://localhost:8000/docs.
+
+    Frontend: exposto na porta 3000 via port-forward, acessível em http://localhost:3000.
+
+    Banco de dados PostgreSQL: exposto na porta 5432 via port-forward, utilizado localmente com o DBeaver para visualização dos dados.
+
+Exemplo de acesso:
+
+    Frontend: http://localhost:3000
+
+    Backend (Swagger Docs): http://localhost:8000/docs
 
 ---
 
