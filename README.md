@@ -100,7 +100,7 @@ O ambiente foi provisionado em máquina local Fedora 40, com os serviços contai
 - Tela web do ArgoCD disponível na porta 8080 após port-forward.
 
 ### Screenshots do ArgoCD funcionando
-
+![ArgoCD funcionando](imgs/argocd2.png)
 ![ArgoCD funcionando](imgs/argocd.png)
 
 ---
