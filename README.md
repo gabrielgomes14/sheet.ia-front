@@ -152,6 +152,7 @@ Exemplo de acesso:
 - Resolução de erros de portas em uso no ambiente local.
 - Ajustes finos na estrutura dos manifests e Dockerfiles para compatibilidade.
 - Manter a consistência do banco de dados durante deploys.
+- Foi necessário adaptar a aplicação (que estava no SQLite) e o ambiente para utilizar PostgreSQL, que é mais robusto e adequado para produção, o que envolveu ajustes na configuração, scripts de inicialização, conexões e no gerenciamento de dados.
 
 ### O que faria diferente
 
