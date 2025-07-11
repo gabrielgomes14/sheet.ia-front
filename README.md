@@ -101,7 +101,7 @@ O ambiente foi provisionado em máquina local Fedora 40, com os serviços contai
 
 ### Screenshots do ArgoCD funcionando
 
-*(inserir screenshots conforme seu ambiente)*
+![ArgoCD funcionando](imgs/argocd.png)
 
 ---
 
