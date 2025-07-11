@@ -1,7 +1,7 @@
 # Trabalho Final – Fundamentos de DevOps
 
-**Aluno:** Gabriel Gomes
-
+**Aluno:** Gabriel Gomes Galikosky
+**Turma:** BSI5
 ---
 
 ## 1. Introdução
@@ -34,7 +34,7 @@ A escolha do Kubernetes com kind permite testar e validar a infraestrutura e dep
 
 ### Descrição das máquinas/instâncias
 
-O ambiente foi provisionado em máquina local Fedora 38, com os serviços containerizados e orquestrados em cluster Kubernetes local (kind). Foram criados os seguintes pods:
+O ambiente foi provisionado em máquina local Fedora 40, com os serviços containerizados e orquestrados em cluster Kubernetes local (kind). Foram criados os seguintes pods:
 
 - Backend FastAPI
 - Frontend Vue 3
@@ -109,7 +109,7 @@ O ambiente foi provisionado em máquina local Fedora 38, com os serviços contai
 
 ### Descrição da aplicação
 
-- Backend desenvolvido em FastAPI, responsável por receber planilhas Excel/CSV, processar os dados, aplicar modelo de Machine Learning para correção dos valores de hodômetro, armazenar no banco e retornar os dados corrigidos via API REST.
+- Backend desenvolvido em FastAPI, responsável por receber planilhas .xlsx, processar os dados, aplicar modelo de Machine Learning para correção dos valores de hodômetro, armazenar no banco e retornar os dados corrigidos via API REST.
 - Banco PostgreSQL para armazenamento dos dados históricos e novos.
 - Frontend em Vue 3 que consome a API, permite upload das planilhas e exibe os dados corrigidos.
 - Uso das bibliotecas Python: Pandas, NumPy, scikit-learn, SQLAlchemy, psycopg2, joblib, entre outras.
@@ -173,5 +173,3 @@ Exemplo para acessar no navegador:
 - **Ansible:** Automação do provisionamento.
 
 ---
-
-Se precisar, posso ajudar a adaptar para seu formato ou incluir detalhes específicos. Quer?
